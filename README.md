@@ -24,7 +24,6 @@ This is my first web development project! I built this portfolio while learning 
 
 1. Download or clone this repository
 2. Open `index.html` in your web browser
-3. That's it!
 
 ## What I Learned
 
