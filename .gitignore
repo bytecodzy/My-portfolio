@@ -1,0 +1,42 @@
+# ============================================
+# GITIGNORE FILE
+# This tells Git which files to IGNORE (not upload)
+# ============================================
+
+# --- OS Generated Files ---
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Editor Files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Environment Variables (KEEP SECRETS OUT!) ---
+.env
+.env.local
+.env.production
+
+# --- Dependencies (too big to upload) ---
+node_modules/
+vendor/
+bower_components/
+
+# --- Build Output ---
+dist/
+build/
+*.min.js
+*.min.css
+
+# --- Logs ---
+*.log
+npm-debug.log*
+
+# --- Temporary Files ---
+tmp/
+temp/
