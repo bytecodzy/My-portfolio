@@ -1,0 +1,387 @@
+/* ============================================
+   MY PORTFOLIO - Stylesheet
+   Practice: Try changing colors, fonts, sizes!
+   ============================================ */
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #1a1a2e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #e94560;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #eee;
+    border-radius: 3px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #eee;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #e94560;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #e94560;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #c73650;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e94560;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-small:hover {
+    background-color: #c73650;
+}
+
+/* --- Sections --- */
+.section {
+    padding: 5rem 10%;
+    min-height: 60vh;
+}
+
+.section-alt {
+    background-color: #f5f5f5;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a1a2e;
+}
+
+/* --- About --- */
+.about-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-stats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 200px;
+}
+
+.stat {
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e94560;
+}
+
+.stat-label {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- Skills --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0f3460;
+    margin-bottom: 1rem;
+}
+
+.skill-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    height: 10px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+}
+
+.skill-fill {
+    background: linear-gradient(90deg, #e94560, #0f3460);
+    height: 100%;
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.skill-percent {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- Projects --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #eee;
+    color: #555;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* --- Contact Form --- */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e94560;
+}
+
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    color: #0f3460;
+    font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+    background: #1a1a2e;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: #e94560;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1a1a2e;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        padding: 3rem 5%;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+}
