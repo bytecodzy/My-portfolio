@@ -20,7 +20,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Animate the skill bars when they come into view
 function animateSkillBars() {
     const skillFills = document.querySelectorAll('.skill-fill');
-    
+
     skillFills.forEach(fill => {
         const width = fill.getAttribute('data-width');
         fill.style.width = width + '%';
@@ -45,7 +45,7 @@ if (skillsSection) {
 
 // --- Smooth Scrolling ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -60,17 +60,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // --- Contact Form Handler ---
 function handleSubmit(event) {
     event.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
     const status = document.getElementById('form-status');
-    
+
     // Simple validation
     if (name && email && message) {
         status.textContent = `Thanks ${name}! Your message has been received. (This is a demo - no email was sent)`;
         status.style.color = '#0f3460';
-        
+
         // Clear the form
         document.querySelector('.contact-form').reset();
     } else {
